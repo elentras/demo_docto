@@ -32,3 +32,5 @@
 
     = link_to 'Edit', edit_professional_path(@professional), class: 'btn btn-warning'
     = link_to 'Back', professionals_path, class: 'btn btn-default'
+  .col-md-6
+    = image_tag @professional.google_map_path

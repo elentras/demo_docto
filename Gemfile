@@ -30,6 +30,15 @@ gem 'autoprefixer-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# Add geocoder gem for Gmap localization
+gem "geocoder"
+
+# Allow display of multiple marker on Gmap
+gem 'gmaps4rails'
+
+# Add underscorejs librarie for gmaps4rails
+gem 'underscore-rails', '~> 1.7.0'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 

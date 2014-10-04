@@ -11,6 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141004215639) do
+
+  create_table "professionals", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "zipcode"
+    t.string   "city"
+    t.string   "country"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "speciality"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

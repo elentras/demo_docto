@@ -8,10 +8,10 @@ class CreateProfessionals < ActiveRecord::Migration
       t.string :zipcode
       t.string :city
       t.string :country
+      t.string :speciality
       t.string :latitude
       t.string :longitude
       t.string :speciality
-
       t.timestamps
     end
   end

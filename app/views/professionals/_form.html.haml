@@ -1,0 +1,53 @@
+<%= form_for(@professional) do |f| %>
+  <% if @professional.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@professional.errors.count, "error") %> prohibited this professional from being saved:</h2>
+
+      <ul>
+      <% @professional.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :adress_1 %><br>
+    <%= f.text_field :adress_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :adress_2 %><br>
+    <%= f.text_field :adress_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

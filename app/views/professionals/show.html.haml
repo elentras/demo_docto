@@ -1,49 +1,34 @@
-<p id="notice"><%= notice %></p>
+.row
+  .col-md-6
+    %p#notice= notice
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @professional.firstname %>
-</p>
+    %p
+      %strong Firstname :
+      = @professional.firstname
+    %p
+      %strong Lastname :
+      = @professional.lastname
+    %p
+      %strong Adress 1 :
+      = @professional.address_1
+    %p
+      %strong Adress 2 :
+      = @professional.address_2
+    %p
+      %strong Zipcode :
+      = @professional.zipcode
+    %p
+      %strong City :
+      = @professional.city
+    %p
+      %strong Country :
+      = @professional.country
+    %p
+      %strong Latitude :
+      = @professional.latitude
+    %p
+      %strong Longitude :
+      = @professional.longitude
 
-<p>
-  <strong>Lastname:</strong>
-  <%= @professional.lastname %>
-</p>
-
-<p>
-  <strong>Adress 1:</strong>
-  <%= @professional.adress_1 %>
-</p>
-
-<p>
-  <strong>Adress 2:</strong>
-  <%= @professional.adress_2 %>
-</p>
-
-<p>
-  <strong>Zipcode:</strong>
-  <%= @professional.zipcode %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @professional.city %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @professional.country %>
-</p>
-
-<p>
-  <strong>Latitude:</strong>
-  <%= @professional.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @professional.longitude %>
-</p>
-
-<%= link_to 'Edit', edit_professional_path(@professional) %> |
-<%= link_to 'Back', professionals_path %>
+    = link_to 'Edit', edit_professional_path(@professional), class: 'btn btn-warning'
+    = link_to 'Back', professionals_path, class: 'btn btn-default'

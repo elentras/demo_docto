@@ -61,6 +61,17 @@ class ProfessionalsController < ApplicationController
     end
   end
 
+  protected
+  def professionals_markers
+    @professionals_markers ||= Gmaps4rails.build_markers(@professionals) do |professional, marker|
+      marker.lat professional.latitude
+      marker.lng professional.longitude
+      marker.infowindow professional.fullname
+    end
+  end
+
+  helper_method :professionals_markers
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_professional

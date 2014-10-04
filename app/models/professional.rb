@@ -8,6 +8,10 @@ class Professional < ActiveRecord::Base
     [address_1, zipcode, city, country].join(', ')
   end
 
+  def fullname
+    [firstname, lastname].join(' ')
+  end
+
   def google_map_path
     "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{latitude}%2C#{longitude}"
   end

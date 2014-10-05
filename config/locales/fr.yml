@@ -19,16 +19,17 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  submit: 'Submit'
-  back: 'Back'
-  show: 'Show'
-  edit: 'Edit'
-  destroy: 'Destroy'
-  create: 'Create'
-  destroy_confirmation: 'Are you sure ?'
-  localization: Localization
-  edit_professional: "Editing a specialist"
-  new_professional: "Create a specialist"
+fr:
+  submit: 'Valider'
+  back: 'Retour'
+  show: 'Voir'
+  edit: 'Éditer'
+  destroy: 'Supprimer'
+  create: 'Créer'
+  destroy_confirmation: 'Étes vous sûr de vouloir supprimer ce spécialiste ?'
+  localization: Localisation
+  edit_professional: "Édition d'un spécialiste"
+  new_professional: "Créer un spécialiste"
+  
   navigation:
-    professionals: Professionnals
+    professionals: Professionnels

@@ -6,7 +6,8 @@
   = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
   = javascript_include_tag "application", "data-turbolinks-track" => true
   = csrf_meta_tags
-%body
+
+%body{id: define_body_id}
   %nav.navbar.navbar-default.navbar-static-top{role: "navigation"}
     = render 'shared/front_navigation'
   .container-fluid

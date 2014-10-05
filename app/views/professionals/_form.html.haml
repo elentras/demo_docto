@@ -16,6 +16,9 @@
     = f.label :lastname, for: "lastname"
     = f.text_field :lastname, id: "lastname"
   .form-group
+    = f.label :speciality, for: "speciality"
+    = f.text_field :speciality, id: "speciality"
+  .form-group
     = f.label :address_1, for: "address_1"
     = f.text_field :address_1, id: "address_1"
   .form-group
@@ -32,3 +35,4 @@
     = f.text_field :country, id: "country"
   .actions
     = f.submit t('submit'), class: 'btn btn-success'
+    = link_to t('back'), professionals_path, class: 'btn btn-default'

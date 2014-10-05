@@ -1,38 +1,29 @@
-.row
+.row-fluid
   .col-md-10
-    %h4 Professionals
+    %h3 Professionals
   .col-md-2
-    = link_to 'New Professional', new_professional_path, class: 'btn btn-success'
+    = link_to t('create'), new_professional_path, class: 'btn btn-success pull-right'
 
-.row
-  .col-md-6
-    %h3 Listing
-    %table.table-bordered.table-striped
+.row-fluid
+  .col-md-5
+    %h5 Liste
+    %table.table.table-bordered.table-striped
       %thead
         %tr
-          %th Firstname
-          %th Lastname
-          %th Address 1
-          %th Zipcode
-          %th City
-          %th Country
-          %th Actions
+          %th= t('firstname')
+          %th= t('lastname')
+          %th= t('speciality')
+          %th{colspan: 3}= t('actions')
       %tbody
         - @professionals.each do |professional|
           %tr
             %td= professional.firstname
             %td= professional.lastname
-            %td= professional.address_1
-            %td= professional.zipcode
-            %td= professional.city
-            %td= professional.country
-            %td
-              = link_to 'Show', professional, class: 'btn btn-success btn-sm'
-              = link_to 'Edit', edit_professional_path(professional), class: 'btn btn-warning btn-sm'
-              = link_to 'Destroy', professional, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'
-
-    %br
-  .col-md-6
-    %h3 Localize professionals
-    %div{style: 'width: 800px;'}
-      #multi_markers{style: 'width: 800px; height: 400px;', data: { markers: raw(professionals_markers.to_json)}}
+            %td= professional.speciality
+            %td= link_to t('show'), professional, class: 'btn btn-success btn-xs'
+            %td= link_to t('edit'), edit_professional_path(professional), class: 'btn btn-warning btn-xs'
+            %td= link_to t('destroy'), professional, method: :delete, data: { confirm: t('destroy_confirmation') }, class: 'btn btn-danger btn-xs'
+  .col-md-7
+    %h3= t('localization')
+    %div.map_block
+      #multi_markers{data: { markers: raw(professionals_markers.to_json)}}

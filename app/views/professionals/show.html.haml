@@ -1,4 +1,4 @@
-.row
+.row-fluid
   .col-md-6
     %p#notice= notice
 
@@ -30,7 +30,7 @@
       %strong Longitude :
       = @professional.longitude
 
-    = link_to 'Edit', edit_professional_path(@professional), class: 'btn btn-warning'
-    = link_to 'Back', professionals_path, class: 'btn btn-default'
+    = link_to t('edit'), edit_professional_path(@professional), class: 'btn btn-warning'
+    = link_to t('back'), professionals_path, class: 'btn btn-default'
   .col-md-6
     = image_tag @professional.google_map_path
